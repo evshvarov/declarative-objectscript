@@ -1,0 +1,38 @@
+ROUTINE %ZLANGF00
+
+ // Returns new instance of DeclarativeOS.Binder with given collection and function.
+ZBIND(collection, function) public {
+  Quit ##class(DeclarativeOS.Binder).%New(collection, function)
+}
+
+ // Returns new collection where each item in the given collection is mapped by the given function.
+ZMAP(collection, function) public {
+  Quit $zbind(collection, function).Map()
+}
+
+ // Returns the first found element from the given collection by the given criteria (function).
+ // Otherwise, returns null string.
+ZFIND(collection, function) public {
+  Quit $zbind(collection, function).Find()
+}
+
+ // Returns new collection which contains filtered elements by the given criteria (function) of the specified collection.
+ZFILTER(collection, function) public {
+  Quit $zbind(collection, function).Filter()
+}
+
+ // Returns $$$YES if collection contains element which is satisfied by the given criteria (function).
+ // Otherwise, returns $$$NO.
+ZEXISTS(collection, function) public {
+  Quit $zbind(collection, function).Exists()
+}
+
+ // Returns count of items in the given collection which satisfies the given criteria (function)
+ZCOUNT(collection, function) public {
+  Quit $zbind(collection, function).Count()
+}
+
+ // Returns concatination of items in the given collection by using the given separator.
+ZJOIN(collection, separator = "") public {
+  Quit ##class(DeclarativeOS.Joiner).join(collection, separator)
+}

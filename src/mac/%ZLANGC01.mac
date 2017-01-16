@@ -1,0 +1,7 @@
+ROUTINE %ZLANGC01
+
+ // Applies the given function to each item in the given collection.
+ZFOREACH(binder) public {
+  do binder.ForEach()
+  Quit
+}

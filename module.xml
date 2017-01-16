@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="declarative-os.ZPM">
+    <Module>
+      <Name>declarative-os</Name>
+      <Version>1.0.0</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="DeclarativeOS.PKG"/>
+
+      <UnitTest Name="/test" Package="Test.DeclarativeOS.PKG" Phase="test"/>
+    </Module>   
+  </Document>
+</Export>
